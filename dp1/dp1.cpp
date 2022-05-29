@@ -27,6 +27,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // TODO: W tym miejscu umieść kod.
 
+
     // Zainicjuj ciągi globalne
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_DP1, szWindowClass, MAX_LOADSTRING);
@@ -147,6 +148,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
             // TODO: tutaj dodaj kod rysowania używający elementu hdc...
+            LPCWSTR a = L"Patryk Mroz";
+            TextOut(hdc, 50, 50, L"Patryk Mroz", 11);
+            TextOut(hdc, 50, 100, L"Rafal Sochacki", 14);
+            TextOut(hdc, 50, 150, L"Rafal Cendrowski", 16);
             EndPaint(hWnd, &ps);
         }
         break;
